@@ -1,0 +1,13 @@
+{
+  "name": "class-01-mocks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "file.js",
+  "scripts": {
+    "dev": "node src/file.js",
+    "test": "node index.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
