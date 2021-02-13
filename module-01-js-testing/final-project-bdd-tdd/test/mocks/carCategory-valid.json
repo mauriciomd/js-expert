@@ -1,0 +1,10 @@
+{
+  "id": "15de6e56-17e9-4d92-9407-6348f3d11d6b",
+  "name": "Cargo Van",
+  "carsId": [
+    "75641ead-d4c4-4d53-9715-27dbe5d836f6",
+    "4a1c4add-38f7-40c1-a369-80674357b484",
+    "80505ddc-fb69-41d3-895b-aef9baeb8b20"
+  ],
+  "price": 24.22
+}
