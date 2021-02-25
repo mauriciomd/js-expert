@@ -7,6 +7,22 @@ export default class Person {
     this.to = to
   }
 
+  static generateInstanceFromString(text) {
+    const SEPARATOR = ' '
+    const VEHICLES_SEPARATOR = ','
+    
+    const [id, vehicles, kmTraveled, from, to] = text.split(SEPARATOR)
+    const person = new Person({
+      id,
+      vehicles: vehicles.split(VEHICLES_SEPARATOR),
+      kmTraveled,
+      from,
+      to
+    })
+
+    return person
+  }
+
   formatted(lang) { 
     const mapDate = date => {
       const [year, month, day] = date.split('-').map(Number)
