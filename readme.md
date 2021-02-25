@@ -1,6 +1,7 @@
 ## Course JS Expert by Erick Wendel
 
 This repository contains the code developed during the course, including all the examples and final projects.
+NOTE: All examples were developed using node 14.16.0
 
 ## Table of content
 
