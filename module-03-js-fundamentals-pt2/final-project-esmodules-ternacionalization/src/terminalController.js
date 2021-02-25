@@ -22,6 +22,12 @@ export default class TerminalController {
     this.initializeTable(database, language)
   }
 
+  updateTerminal(item) {
+    const options = this.getTableOptions()
+    this.data.push(item)
+    this.print(chalkTable(options, this.data))
+  }
+
   closeTerminal() {
     this.terminal.close()
   }

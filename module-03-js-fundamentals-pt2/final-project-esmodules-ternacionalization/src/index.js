@@ -1,6 +1,7 @@
 import database from './../database.json'
 import Person from './person.js'
 import TerminalController from './terminalController.js'
+import { save } from './repository.js'
 
 const DEFAULT_LANGUAGE = 'pt-BR'
 const STOP_TERMINAL = ':q'
@@ -18,7 +19,12 @@ async function mainLoop() {
     }
 
     const person = Person.generateInstanceFromString(answer)
-    console.log('person', person.formatted(DEFAULT_LANGUAGE))
+    const formattedPerson = person.formatted(DEFAULT_LANGUAGE)
+    
+    terminalController.updateTerminal(formattedPerson)
+    await save(person)
+
+    return mainLoop()
   } catch (e) {
     console.error('Deu ruim**', e)
     return mainLoop()
