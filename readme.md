@@ -5,8 +5,9 @@ NOTE: All examples were developed using node 14.16.0
 
 ## Table of content
 
-| Module name             | Subject                                                           |
-| ----------------------- | ----------------------------------------------------------------- |
-| 01 - Testing            | Mocks, Stubs, Spies, E2e and Code coverage                        |
-| 02 - Fundamentals Pt. 1 | Passing by Value and Reference, Type Coercion and Prototype Chain |
-| 03 - Fundamentals Pt. 2 | Context and ESModules                                             |
+| Module name              | Subject                                                                           |
+| ------------------------ | --------------------------------------------------------------------------------- |
+| 01 - Testing             | Mocks, Stubs, Spies, E2e and Code coverage                                        |
+| 02 - Fundamentals Pt. 1  | Passing by Value and Reference, Type Coercion and Prototype Chain                 |
+| 03 - Fundamentals Pt. 2  | Context and ESModules                                                             |
+| 04 - Advanced Data Types | Generators/Iterators, Symbol, Map/WeakMap, Set/WeakSet, Reflect, Proxy and Timers |
