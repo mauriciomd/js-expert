@@ -12,8 +12,8 @@ describe('#TextProcessorFluentAPI', () => {
 
   it('#extractPeopleData', () => {
     const result = new TextProcessorFluentAPI(mock)
-                        .extractPeopleData()
-                        .build()
+                      .extractPeopleData()
+                      .build()
 
     const expectedResult = [
       [
@@ -29,6 +29,72 @@ describe('#TextProcessorFluentAPI', () => {
         'domiciliada a Av. dos Estados, 99, bairro Jardins, São Paulo.  '
       ].join('\n'),
     ]
+
+    expect(result).to.be.deep.equal(expectedResult)
+  })
+
+  it('#divideTextIntoColumns', () => {
+    const content = [
+      [
+        'Xuxa da Silva, brasileira, casada, CPF 235.743.420-12, residente e ',
+        'domiciliada a Rua dos bobos, zero, bairro Alphaville, São Paulo. '
+      ].join('\n'),
+    ]
+
+    const expectedResult = [
+      [
+        'Xuxa da Silva',
+        ' brasileira',
+        ' casada',
+        ' CPF 235.743.420-12',
+        ' residente e \ndomiciliada a Rua dos bobos',
+        ' zero',
+        ' bairro Alphaville',
+        ' São Paulo. '
+      ],
+    ]
+    
+    const result = new TextProcessorFluentAPI(content)
+                    .divideTextIntoColumns()
+                    .build()
+
+    
+
+    expect(result).to.be.deep.equal(expectedResult)
+  })
+
+  it('#removeEmptyCharacters', () => {
+    const content = [
+      [
+        'Xuxa da Silva',
+        ' brasileira',
+        ' casada',
+        ' CPF 235.743.420-12',
+        ' residente e \ndomiciliada a Rua dos bobos',
+        ' zero',
+        ' bairro Alphaville',
+        ' São Paulo. '
+      ],
+    ]
+
+    const expectedResult = [
+      [
+        'Xuxa da Silva',
+        'brasileira',
+        'casada',
+        'CPF 235.743.420-12',
+        'residente e domiciliada a Rua dos bobos',
+        'zero',
+        'bairro Alphaville',
+        'São Paulo.'
+      ],
+    ]
+    
+    const result = new TextProcessorFluentAPI(content)
+                    .removeEmptyCharacters()
+                    .build()
+
+    
 
     expect(result).to.be.deep.equal(expectedResult)
   })
