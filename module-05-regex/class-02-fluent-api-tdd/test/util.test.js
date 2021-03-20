@@ -12,7 +12,7 @@ describe('#Util', () => {
   it('#evaluateRegex should not throw an error using an safe expression', () => {
     const regex = /^([a-z])$/ 
 
-    expect(() => evaluateRegex(regex)).to.not.throw
+    expect(() => evaluateRegex(regex)).to.not.throw()
     expect(evaluateRegex(regex)).to.be.deep.equal(regex)
   })
 })

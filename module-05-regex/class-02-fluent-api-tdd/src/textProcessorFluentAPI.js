@@ -1,4 +1,5 @@
 const { evaluateRegex } = require('./util')
+const Person = require('./person')
 
 // Fluent API: the goal here is executa tasks, step by step (as a pipeline)
 // and then it calls the method 'build'. 
@@ -29,6 +30,11 @@ class TextProcessorFluentAPI {
   removeEmptyCharacters() {
     const trimSpaces = evaluateRegex(/^\s+|\s$|\n/g)
     this.#content = this.#content.map(line => line.map(item => item.replace(trimSpaces, '')))
+    return this
+  }
+
+  mapPerson() {
+    this.#content = this.#content.map(line => new Person(line))
     return this
   }
 
