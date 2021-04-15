@@ -12,4 +12,4 @@ NOTE: All examples were developed using node 14.16.0
 | 03 - Fundamentals Pt. 2    | Context and ESModules                                                             |
 | 04 - Advanced Data Types   | Generators/Iterators, Symbol, Map/WeakMap, Set/WeakSet, Reflect, Proxy and Timers |
 | 05 - Regex                 | ReGex, Fluent API, Facade and Security                                            |
-| 06 - Design Patterns Pt. 1 | Factory, Abstract Factory, Builder, Fluent API and Facade                         |
+| 06 - Design Patterns Pt. 1 | Factory, Abstract Factory, Builder, Fluent API and Facade and, Test Data Builder  |
